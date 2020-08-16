@@ -3,3 +3,4 @@ psycopg2
 django-tinymce
 requests
 Pillow
+gunicorn==19.9.0
