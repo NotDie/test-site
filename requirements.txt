@@ -4,6 +4,5 @@ django-tinymce
 requests
 Pillow
 gunicorn==19.9.0
-django-heroku
-whitenoise
-dj-database-url
+whitenoise==3.3.0
+dj-database-url==0.4.2
