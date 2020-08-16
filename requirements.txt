@@ -4,5 +4,5 @@ django-tinymce
 requests
 Pillow
 gunicorn==19.9.0
-whitenoise==3.3.0
+whitenoise==5.0.1
 dj-database-url==0.4.2
