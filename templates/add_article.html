@@ -1,6 +1,6 @@
 {% extends 'wrapper.html' %}
 {% block content %}
-{% load static %}
+{% load static from staticfiles %}
   <div class="content" style="margin-top:100px;">
     <form enctype="multipart/form-data" action="/add_article" method="POST">
       {% csrf_token %}
