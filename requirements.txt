@@ -6,3 +6,4 @@ Pillow
 gunicorn==19.9.0
 django-heroku
 whitenoise
+dj-database-url
