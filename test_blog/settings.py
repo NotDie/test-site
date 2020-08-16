@@ -136,6 +136,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR,  'templates'),
     # Add to this list all the locations containing your static files
 )
