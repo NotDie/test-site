@@ -1,0 +1,45 @@
+{% extends 'wrapper.html' %}
+{% block content %}
+{% load static %}
+  <div class="content" style="margin-top:100px;">
+    <form enctype="multipart/form-data" action="/add_article" method="POST">
+      {% csrf_token %}
+        <div class="header_left_side">
+          {{ form.title }}
+          {{ form.content }}
+        </div>
+        <div class="header_right_side">
+          <div style="width:100%;">
+            <button type="submit" class="save btn btn-default">Опубликовать</button>
+          </div>
+          <div class="m10">
+            <h5 class="text">Загрузить изображение</h5>
+            <label class="save btn btn-default">
+            {{ form.image }}
+            Файл
+          </label>
+          </div>
+        </div>
+    </form>
+    <style>
+    input[type="file"]{
+      display:none;
+    }
+    form{
+      display:flex;
+    }
+    .m10{
+      margin-top:10px;
+      border: 2px solid #CDCDCD;
+      height: 150px;
+      width:400px;
+    }
+    .header_left_side{
+      width:50%;
+    }
+    .header_right_side{
+      margin-left: 50px;
+    }
+    </style>
+  </div>
+{% endblock %}

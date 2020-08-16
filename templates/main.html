@@ -1,0 +1,28 @@
+{% extends 'wrapper.html' %}
+{% block content %}
+{% load static %}
+<div class="header">
+  <div class="header_left_side">
+    <h3 class="big_text text">{{ last_post.title }}</h3>
+    <p class="small_text">{{ last_post.content|safe }}</p>
+    <a href="{% url 'blog_detail' id=last_post.id %}" class="waves-effect waves-light btn">Читать</a>
+  </div>
+  <div class="header_right_side">
+    <img style="max-height: 100%;" src="{{ last_post.image.url }}"></img>
+  </div>
+</div>
+<div class="content">
+  <div style="width:100%;margin-bottom:25px;">
+    <p><h5 class="text" style="font-size: 32px; line-height: 38px;">Другие статьи</h5></p>
+  </div>
+  {% for post in info %}
+      <div class="info_div">
+          <a href="{% url 'blog_detail' id=post.id %}">
+          <div class="article_date text2"></div>
+          <div class="article_image"><img src="{{ post.image.url }}"></img></div>
+          <div class="article_title text2"><h5> {{ post.title }}</h5></div>
+        </a>
+      </div>
+  {% endfor %}
+</div>
+{% endblock %}

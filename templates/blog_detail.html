@@ -1,0 +1,17 @@
+{% extends 'wrapper.html' %}
+{% block content %}
+{% load static %}
+  <div class="content">
+    <div style="width:50%;margin:0 auto;">
+        <p><h2 class="text">{{ news.title }}</h2></p>
+        <img style="position:relative;top:0px;max-height:50%;left:25%;right:25%;" src="{% static 'images/1Statya_3.png' %}"></img>
+        <p>{{ news.content|safe }}</p>
+      </div>
+    </div>
+
+    <style>
+      .content{
+        background-color:#E5E5E5;
+      }
+    </style>
+{% endblock %}
